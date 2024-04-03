@@ -1,7 +1,6 @@
-using System;
 using UnityEngine;
 
-namespace Components.Character.AnimationService
+namespace Components.Actor.Animations
 {
     public enum AnimationRotateSide
     {
@@ -36,7 +35,7 @@ namespace Components.Character.AnimationService
         SeriouslyWounded
     }
 
-    public interface IAnimationService
+    public interface IAnimationController
     {
         void Rotate(AnimationRotateSide side);
         void Jump(float power);

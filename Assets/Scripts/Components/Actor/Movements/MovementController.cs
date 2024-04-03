@@ -1,8 +1,9 @@
+using System;
 using UnityEngine;
 
-namespace Components.Character.MovementService
+namespace Components.Actor.Movements
 {
-    public abstract class MovementService : MonoBehaviour, IMovementService
+    public abstract class MovementController : MonoBehaviour, IMovementController
     {
         public abstract float Move(Vector3 direction, float speed);
         public abstract void Rotate(Quaternion angle);

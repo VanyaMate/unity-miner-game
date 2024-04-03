@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Components.Character.AnimationService
+namespace Components.Actor.Animations
 {
-    public abstract class AnimationService : MonoBehaviour, IAnimationService
+    public abstract class AnimationController : MonoBehaviour, IAnimationController
     {
         public abstract void Rotate(AnimationRotateSide side);
         public abstract void Jump(float power);

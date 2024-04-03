@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Components.Character.ViewDirectionService
+namespace Components.Actor.ViewDirections
 {
-    public class GameObjectViewDirectionService : ViewDirectionService
+    public class GameObjectViewDirectionController : ViewDirectionController
     {
         [SerializeField] private List<GameObject> _rotateElements;
 

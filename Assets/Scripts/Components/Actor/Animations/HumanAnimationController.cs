@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Components.Character.AnimationService
+namespace Components.Actor.Animations
 {
-    public class HumanAnimationService : AnimationService
+    public class HumanAnimationController : AnimationController
     {
         public override void Rotate(AnimationRotateSide side)
         {

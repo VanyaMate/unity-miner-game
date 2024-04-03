@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace Components.Character.MovementService
+namespace Components.Actor.Movements
 {
-    public interface IMovementService
+    public interface IMovementController
     {
         float Move(Vector3 direction, float speed);
         void Rotate(Quaternion angle);
