@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Actor.Controller.Rotation
 {
-    public class UnityTransformMonoBehaviourRotationController : MonoBehaviourRotationController
+    public class UnityTransformRotationController : MonoBehaviourRotationController
     {
         [SerializeField] private Transform _body;
         [SerializeField] private Transform _head;
