@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   title: Ak-74 Damage 10
   type: 1
-  speed: 100
+  speed: 1000
   damage: 10
   bullet: {fileID: 3554845770589002759, guid: bd0dbef242e2a2648a80b5910cf098ea, type: 3}
   hitEffect: {fileID: 180128, guid: 6586ff0f14125534cae2f5d8f04b7871, type: 3}

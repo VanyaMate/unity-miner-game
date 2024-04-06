@@ -1,6 +1,7 @@
 using System;
 using Actor.Controller;
 using Items.Weapons;
+using Items.Weapons.Mounts;
 using UnityEngine;
 
 namespace Player.Input
@@ -9,8 +10,9 @@ namespace Player.Input
     {
         [SerializeField] private HumanActorController _humanActorController;
         [SerializeField] private MonoBehaviourWeaponItemController _behaviourWeapon;
+        [SerializeField] private MonoBehaviourWeaponUsableMountController _weaponMount;
+        [SerializeField] private float _fireRate = 30;
 
-        private float _fireRate = 5;
         private float _nextFire = 0;
 
         private void Awake()
@@ -26,19 +28,27 @@ namespace Player.Input
             float mouseY = UnityEngine.Input.GetAxis("Mouse Y");
             bool jump = UnityEngine.Input.GetKeyDown(KeyCode.Space);
             bool shift = UnityEngine.Input.GetKey(KeyCode.LeftShift);
-            bool fire = UnityEngine.Input.GetMouseButton(0);
+            bool toggleWeaponMounts = UnityEngine.Input.GetKeyDown(KeyCode.F);
 
             this._humanActorController.Move(
                 new Vector2(horizontalDirection, verticalDirection).normalized,
                 shift ? ActorMoveType.Fast : ActorMoveType.Normal
             );
-
             this._humanActorController.Rotate(new Vector2(mouseX, mouseY));
             if (jump)
             {
                 this._humanActorController.Jump();
             }
 
+            if (toggleWeaponMounts)
+            {
+                this._weaponMount.ToggleNext();
+            }
+        }
+
+        private void LateUpdate()
+        {
+            bool fire = UnityEngine.Input.GetMouseButton(0);
             if (fire)
             {
                 if (this._nextFire >= 0)
