@@ -16,7 +16,7 @@ namespace Actor.Controller.Movement
             float speed = this._speed *
                           movementType switch
                           {
-                              MovementType.Fast => 1.5f,
+                              MovementType.Fast => 2f,
                               MovementType.Normal => 1f,
                               MovementType.Slow => 0.4f,
                               _ => 1f

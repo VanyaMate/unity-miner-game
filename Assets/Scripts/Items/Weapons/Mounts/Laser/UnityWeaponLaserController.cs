@@ -11,14 +11,14 @@ namespace Items.Weapons.Mounts.Laser
         [SerializeField] private LineRenderer _lineRenderer;
 
         private Transform _worldLaserPoint;
-        private WeaponUsableMountState _currentState = WeaponUsableMountState.Disable;
+        private WeaponUsableMountState _currentState = WeaponUsableMountState.Active;
 
         private void Awake()
         {
             this._worldLaserPoint = Instantiate(this._laserPoint, transform.position, Quaternion.identity)
                 .GetComponent<Transform>();
-            this._worldLaserPoint.gameObject.SetActive(false);
-            this._lineRenderer.enabled = false;
+            this._worldLaserPoint.gameObject.SetActive(true);
+            this._lineRenderer.enabled = true;
         }
 
         private void LateUpdate()
